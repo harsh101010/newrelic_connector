@@ -14,7 +14,7 @@ resource "aws_s3_bucket" "newrelic_lambda_bucket" {
 resource "aws_s3_bucket_object" "lambda_zip" {
   bucket = aws_s3_bucket.newrelic_lambda_bucket.bucket
   key    = var.s3_key
-  source =  "./s3_to_newrelic_connector_lambda.zip" 
+  source =  "../s3_to_newrelic_connector_lambda.zip" 
 }
 
 resource "aws_iam_role" "lambda_exec_role" {
