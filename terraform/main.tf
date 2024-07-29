@@ -18,7 +18,7 @@ resource "aws_s3_bucket_object" "lambda_zip" {
 }
 
 resource "aws_iam_role" "lambda_exec_role" {
-  name = "lambda_exec_role"
+  name = "lambda_exec_role_for_newrelic_injection"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",

@@ -7,7 +7,7 @@ variable "lambda_function_name" {
 variable "s3_bucket" {
   description = "S3 bucket to store Lambda zip file and lb logs"
   type        = string
-  default     = "kpp_lb_logs"
+  default     = "kpp-lb-logs"
 }
 
 variable "s3_key" {
