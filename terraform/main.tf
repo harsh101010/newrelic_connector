@@ -41,7 +41,7 @@ resource "aws_iam_role_policy_attachment" "lambda_policy" {
 
 resource "aws_iam_role_policy_attachment" "s3_policy" {
   role       = aws_iam_role.lambda_exec_role.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonS3FullAccessRole"
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonS3FullAccess"
 }
 
 
