@@ -26,9 +26,9 @@ jobs:
       - name: Package Lambda function
         run: |
           mkdir -p package
-          cp src/handler.py package/
+          cp lambda_function/handler.py package/
           cd package
-          pip install -r ../src/requirements.txt -t .
+          pip install -r ../lambda_function/requirements.txt -t .
           zip -r ../s3_to_newrelic_connector_lambda.zip .
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v2
